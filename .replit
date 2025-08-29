@@ -1,0 +1,59 @@
+
+# ================================================================
+# REPLIT JAVA PROJECT CONFIGURATION
+# Easy setup guide with helpful comments
+# ================================================================
+
+# JAVA VERSION SETUP
+# Change this if you need a different Java version
+modules = ["java-graalvm22.3"]
+
+# SYSTEM ENVIRONMENT (Don't change this)
+[nix]
+channel = "stable-25_05"
+
+# REPLIT FEATURES
+[agent]
+expertMode = true  # Set to false for simpler interface
+
+# ================================================================
+# RUN BUTTON CONFIGURATION
+# This is what happens when you click the green "Run" button
+# ================================================================
+[workflows]
+runButton = "Run"
+
+# ================================================================
+# YOUR MAIN APP WORKFLOW
+# Edit the command below to change how your Java app runs
+# ================================================================
+[[workflows.workflow]]
+name = "Run"
+author = 42693562
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+# EDIT THIS LINE: Change the file name and class name as needed
+# Current setup: compiles Dog.java and runs Dog class
+# Format: "mkdir -p build && javac YourFile.java -d build/ && java -cp build YourClassName"
+args = "mkdir -p build && javac SampleMath/Addition.java -d build/ && java -cp build Addition"
+
+# ================================================================
+# PACKAGE MANAGER SETTINGS
+# Controls how Replit handles Java packages and dependencies
+# ================================================================
+[packager]
+language = "java"
+
+[packager.features]
+packageSearch = false      # Enable to search for Java packages
+guessImports = false      # Enable for auto-import suggestions  
+enabledForHosting = false # Enable for web hosting features
+
+# ================================================================
+# QUICK REFERENCE:
+# - To run a different Java file: Change "Dog.java" and "Dog" in the args line
+# - To add libraries: Place .jar files in your project and update the classpath
+# - Run button name: Change the "runButton" value above
+# ================================================================
