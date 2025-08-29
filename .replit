@@ -14,7 +14,7 @@ channel = "stable-25_05"
 
 # REPLIT FEATURES
 [agent]
-expertMode = true  # Set to false for simpler interface
+expertMode = true
 
 # ================================================================
 # RUN BUTTON CONFIGURATION
