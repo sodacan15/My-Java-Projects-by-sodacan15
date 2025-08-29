@@ -1,0 +1,28 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Build directories
+build/
+target/
+out/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.eclipse/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Replit files
+.replit
+.cache/
+.local/
