@@ -19,7 +19,7 @@ class Add {
      try {
         this.a = Integer.parseInt(input);
      } catch (Exception e) {
-        System.out.println("Invalid input");
+        System.out.println("Invalid input bitch");
         this.a = 0; // default value
      }
   }
