@@ -1,5 +1,6 @@
 package SampleMath.Calculations;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Console {
   // Clears Screen in Java
@@ -16,47 +17,26 @@ public class Console {
       }
   }
 
-  // Collects User Data
-  public double getInput (Scanner sc, String prompt) {
-      while (true) {
-          System.out.print(prompt);
-          String input = sc.nextLine();
-          try {
-              return Double.parseDouble(input);
-          } catch (Exception e) {
-              System.out.println("Invalid input! Please enter a valid number.");
-          }
-      }
-  }
-    String [] operators = {"+", "-", "*", "/", "%"};
+    public static String [] inputs;
+    public static ArrayList<Double> nums = new ArrayList<> ();
+    public static ArrayList<String> operators = new ArrayList<> (); 
     
-    public String getOperator (Scanner sc, String prompt){
-        Boolean found = false;
-        while (found == false){
-            System.out.print(prompt);
-            String input = sc.nextLine();
-            for(String ops : operators){
-                if (input.equals(ops)){
-                    found = true;
-                    return input;
-                }
-            }
-            if (found == false){
-                System.out.println("Invalid Operator");
-            }
-        }
-        return null;
-        
+    public void getInput (Scanner sc, String prompt){
+        System.out.print(prompt);
+        String input = sc.nextLine();
+        inputs = input.split(" ");
+        sortNum();
     }
 
-    public void Answer (double a, double b, double c, String operator){
-        System.out.println(a + " " + operator + " " + b + " = " + c);
+    public void sortNum () {
+        
+        for (String word: Console.inputs) {
+            if (word.matches("[0-9]+")){
+                nums.add(Double.parseDouble(word));
+            } else if (word.matches("[+\\-*/%]")){
+                operators.add(word);
+            }
+        }
+        
     }
-    
-    public Boolean Continue (Scanner sc) {
-        System.out.print("Continue? (y/n): ");
-        String decision = sc.nextLine();
-        return decision.equalsIgnoreCase("y");
-    }
-    
 }
