@@ -29,14 +29,21 @@ public class Console {
     }
 
     public void sortNum () {
-        
         for (String word: Console.inputs) {
-            if (word.matches("[0-9]+")){
-                nums.add(Double.parseDouble(word));
-            } else if (word.matches("[+\\-*/%]")){
-                operators.add(word);
+            try {
+                if (word.matches("-?\\d+(\\.\\d+)?")){
+                    nums.add(Double.parseDouble(word));
+                } else if (word.matches("[+\\-*/%]")){
+                    operators.add(word);
+                } else {
+                    System.out.println("Unknown token: " + word);
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input: " + word);
             }
         }
-        
     }
+
+    
+    
 }

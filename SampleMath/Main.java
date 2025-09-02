@@ -8,8 +8,10 @@ public class Main{
     Console ops = new Console();
     Operations calc = new Operations();
     
-    ops.getInput(sc, "Enter Any Word We Can Parse: ");
-    calc.Calculate(ops.operators, ops.nums);
+    ops.getInput(sc, "> ");
+    calc.Calculate(SampleMath.Calculations.Console.operators, 
+                   SampleMath.Calculations.Console.nums);
+    calc.printAnswer();
     
   }
 }

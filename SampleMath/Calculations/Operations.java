@@ -51,26 +51,28 @@ public class Operations {   // ✅ must be public to import
         }
     }
 
-    public void Calculate (ArrayList<String> ops, ArrayList<Double> num) {
-        for (String op: ops){
-               if (i == 0){
-                   Operator(num.get(i), num.get(i+1), op);
-                   i++;
-               } else {
-                   inputOne = ans; inputTwo = num.get(i+1);
-                   Operator(num.get(i), num.get(i+1), op);
-                      i++;
-               }
+    public void  Calculate (ArrayList<String> ops, ArrayList<Double> num) {
+        if (ops.size() == 0){
+            ans = num.get(0);   
+        } else {
+            for (int k = 0; k < ops.size(); k++){
+                if (i == 0) {
+                    Operator(num.get(k), num.get(k+1), ops.get(k));
+                    i++;
+                } else {
+                    Operator(ans, num.get(k+1), ops.get(k));
+                }
+            }
         }
+        
     }
+
+    
 
     public void printAnswer (){
         System.out.println("Answer: " + ans);
     }
 
-    public void reset (){
-        inputOne = ans;
-        i++;
-    }
+
     
 }
