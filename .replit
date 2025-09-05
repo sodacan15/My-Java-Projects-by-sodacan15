@@ -29,7 +29,7 @@ task = "shell.exec"
 # EDIT THIS LINE: Change the file name and class name as needed
 # Current setup: compiles Dog.java and runs Dog class
 # Format: "mkdir -p build && javac YourFile.java -d build/ && java -cp build YourClassName"
-args = "mkdir -p build && javac SampleMath/Main.java -d build/ && java -cp build Main"
+args = "mkdir -p build && javac SampleMath//Calculations/Main.java -d build/ && java -cp build Main"
 
 # ================================================================
 # PACKAGE MANAGER SETTINGS

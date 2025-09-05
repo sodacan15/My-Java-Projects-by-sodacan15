@@ -41,4 +41,12 @@ Note: For this version, the same operations are still done as the previous.
   * Algebraic and trigonometric expressions can be added on the future.
   * Chop Chop Method: Chops the expressions based on the parenthesis.
 
+**VERSION 1.2: Improvement on the Parser**
+-> In this version, I utilized ChatGPT to help me chop the input and evaluate them one by one including those inside the parenthesis.
 
+*What is Added?*
+1. Regex utilization -> Utilized regex to remove and isolate the equation inside the parenthesis. Slowly, the program will begin to evaluate them.
+2. Compresed Console and Operations into parser which handles both parsing and calculation.
+
+*Status of the Project*
+To be honest, I realized that the idea of a parsing calculator is too complicated for me as a begginer. However, I would like to return back to this calculator once that I have the fundamentals on me.
